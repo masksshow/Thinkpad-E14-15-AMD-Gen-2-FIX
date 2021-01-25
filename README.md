@@ -3,6 +3,9 @@ Fn-keys not working - Thinkpad E14-15 AMD Gen 2
 
 ## Fn-keys not working - Thinkpad E14-15 AMD Gen 2
 
+This script will fix non-working fn keys, sleep mode when the lid is closed and the battery is connected.
+
+
 Update kernel: https://github.com/pimlie/ubuntu-mainline-kernel.sh
 
 1. Download script
