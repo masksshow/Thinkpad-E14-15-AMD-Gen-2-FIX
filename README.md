@@ -7,6 +7,7 @@ Update kernel: https://github.com/pimlie/ubuntu-mainline-kernel.sh
 
 1. Download script
 2. Make it executable
+3. If in your system bash: Replace `#!/bin/sh` with `#!/bin/bash`
 3. Run
 `
 sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
@@ -16,5 +17,9 @@ sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
 
 My version
 Bios 1.08
+
 Ubuntu 20.04
+
 kernel 5.9.16
+
+Thanks for attention
