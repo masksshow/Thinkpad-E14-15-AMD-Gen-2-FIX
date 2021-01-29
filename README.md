@@ -31,6 +31,9 @@ sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
 ---
 
 Supported BIOS: 1.8 - 1.10
+Link: [driver-list](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e15-gen-2-type-20t8-20t9/downloads/driver-list/) 
+
+
 
 My system:
 Ubuntu 20.04
