@@ -30,11 +30,10 @@ sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
 
 ---
 
-My version
-Bios 1.08
+Supported BIOS: 1.8 - 1.10
 
+My system:
 Ubuntu 20.04
-
 kernel 5.9.16
 
 Thanks for attention
