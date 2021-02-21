@@ -15,10 +15,20 @@ Link: [ubuntu-mainline-kernel.sh](https://github.com/pimlie/ubuntu-mainline-kern
 1. Download script
 2. Make it executable
 3. If in your system bash: Replace `#!/bin/sh` with `#!/bin/bash`
-3. Run
+5. Run
 `
 sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
+
+###If this dosent run well and create a grub config do the steps given below (tried in Ubuntu 20.04.2)
+
+1) After downloading the script, you need to run 'sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh' to strip out ^M in the file #thanks to @sysintelligent from lenovo forums for this .
+
+2) You need to run the following commands to install acpidump
+ 
+sudo apt-get update
+sudo apt-get install acpidump
 `
+
 4. Reboot
 
 ---
