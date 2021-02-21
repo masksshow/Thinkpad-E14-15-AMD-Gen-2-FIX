@@ -9,33 +9,35 @@ This script will fix non-working fn keys, sleep mode when the lid is closed and 
 
 Link: [ubuntu-mainline-kernel.sh](https://github.com/pimlie/ubuntu-mainline-kernel.sh) 
 
-
+---
 ### Script instruction:
 
 1. Download script
 2. Make it executable
-3. If in your system bash: Replace `#!/bin/sh` with `#!/bin/bash`
-5. Run
-`
-sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt
+3. Run `sudo ./thinkpad-e15-gen2-firmware-fix.sh --grub-setup-dsdt`
+4. Reboot
+---
+### Note:
+#### If in your system bash:
+Replace `#!/bin/sh` with `#!/bin/bash` in script
 
-###If this dosent run well and create a grub config do the steps given below (tried in Ubuntu 20.04.2)
+#### If this dosent run well and create a grub config do the steps given below (tried in Ubuntu 20.04.2):
 
-1) After downloading the script, you need to run 'sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh' to strip out ^M in the file #thanks to @sysintelligent from lenovo forums for this .
+1) After downloading the script, you need to run 'sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh' to strip out ^M in the file 
 
 2) You need to run the following commands to install acpidump
- 
-sudo apt-get update
-sudo apt-get install acpidump
-`
 
-4. Reboot
+`sudo apt-get update`
+
+`sudo apt-get install acpidump`
+
+thanks to @sysintelligent from lenovo forums for this .
+
+#### If you are running this on Arch
+make sure you have acpica installed and change the line `update-grub` to `grub-mkconfig -o /boot/grub/grub.cfg`
 
 ---
-*Note: If you are running this on Arch make sure you have acpica installed and change the line "update-grub" to "grub-mkconfig -o /boot/grub/grub.cfg"
-
----
-
+### Forums
  [forums.lenovo.com thread](https://forums.lenovo.com/t5/Other-Linux-Discussions/Linux-Fn-keys-not-working-Thinkpad-E14-AMD-Gen-2/m-p/5027791?page=8) 
 
 ---
