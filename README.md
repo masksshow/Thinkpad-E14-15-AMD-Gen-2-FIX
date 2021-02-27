@@ -23,7 +23,7 @@ Replace `#!/bin/sh` with `#!/bin/bash` in script
 
 #### If this dosent run well and create a grub config do the steps given below (tried in Ubuntu 20.04.2):
 
-1) After downloading the script, you need to run 'sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh' to strip out ^M in the file 
+1) After downloading the script, you need to run `sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh` to strip out ^M in the file 
 
 2) You need to run the following commands to install acpidump
 
@@ -35,6 +35,10 @@ thanks to @sysintelligent from lenovo forums for this .
 
 #### If you are running this on Arch
 make sure you have acpica installed and change the line `update-grub` to `grub-mkconfig -o /boot/grub/grub.cfg`
+
+#### If you are running fedora
+sudo dnf install acpidump -y
+Run the script named  `thinkpad-e15-gen2-firmware-fix_fedora.sh` and it should work . Tested in fedora 33 with 5.10.18 kernel.
 
 ---
 ### Forums
