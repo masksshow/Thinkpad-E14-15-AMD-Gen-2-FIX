@@ -34,7 +34,10 @@ Replace `#!/bin/sh` with `#!/bin/bash` in script
 thanks to @sysintelligent from lenovo forums for this .
 
 #### If you are running this on Arch
-make sure you have acpica installed and change the line `update-grub` to `grub-mkconfig -o /boot/grub/grub.cfg`
+
+Make sure you have acpica installed (`pacman -S acpica`) and run `thinkpad-e15-gen2-firmware-fix_arch.sh` instead. Tested with kernel `5.12.10-arch1-1`.
+Normally the `^M` aren't present in this script, but if you get an error related to this then see above.
+**NOTE: The script uses `#!/usr/bin/bash` as a crunchbang since it's the common Arch location for bash. You have to change it if you use another interpreter/it is located elsewhere!**
 
 #### If you are running fedora
 sudo dnf install acpidump -y
