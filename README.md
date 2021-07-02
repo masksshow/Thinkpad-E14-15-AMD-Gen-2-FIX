@@ -33,7 +33,7 @@ Replace `#!/bin/sh` with `#!/bin/bash` in script
 
 thanks to @sysintelligent from lenovo forums for this .
 
-###Arch
+### Arch
 
 Make sure you have acpica installed (`pacman -S acpica`) and run `thinkpad-e15-gen2-firmware-fix_arch.sh` instead. Tested with kernel `5.12.10-arch1-1`.
 Normally the `^M` aren't present in this script, but if you get an error related to this then see above.
@@ -45,7 +45,7 @@ Run the script named  `thinkpad-e15-gen2-firmware-fix_fedora.sh` and it should w
 
 ---
 
-###Pop Os
+### Pop Os
 Pop os uses systemd-boot . So first we need to install grub . For that you can follow this video : https://youtu.be/wLOZfT0732Y
 Then donwload the script for pop , make it executable and then run as : 
 `sudo ./thinkpad-e15-gen2-firmware-fix_pop.sh --grub-setup-dsdt`
