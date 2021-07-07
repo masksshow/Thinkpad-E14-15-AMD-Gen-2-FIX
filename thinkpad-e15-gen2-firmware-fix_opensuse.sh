@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 GRUB_CUSTOM_ACPI='/boot/thinkpad-e15-gen2-firmware-1.09-power-supply-fix.aml'
 GRUB_ACPI_CFG='/etc/grub.d/01_acpi'
@@ -35,7 +35,7 @@ GRUB_CUSTOM_ACPI="${GRUB_CUSTOM_ACPI}"
 
 libdir=/usr/share
 
-. \${libdir}/grub/grub-mkconfig_lib
+. \${libdir}/grub2/grub-mkconfig_lib
 
 # Load custom ACPI table
 if [ x\${GRUB_CUSTOM_ACPI} != x ] && [ -f \${GRUB_CUSTOM_ACPI} ] \\
@@ -49,6 +49,6 @@ fi
 EOF2
 	chmod a+x "$GRUB_ACPI_CFG"
 	cp -f dsdt.aml "$GRUB_CUSTOM_ACPI"
-	update-grub
+	grub2-mkconfig -o /boot/efi/EFI/opensuse/grub.cfg
 fi
 popd
