@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 GRUB_CUSTOM_ACPI='/boot/thinkpad-e15-gen2-firmware-1.09-power-supply-fix.aml'
 GRUB_ACPI_CFG='/etc/grub.d/01_acpi'
