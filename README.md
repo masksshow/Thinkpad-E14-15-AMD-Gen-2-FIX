@@ -23,7 +23,7 @@ Replace `#!/bin/sh` with `#!/bin/bash` in script
 
 ###If this dosent run well and create a grub config do the steps given below (tried in Ubuntu 20.04.2):
 
-1) After downloading the script, you need to run `sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh` to strip out ^M in the file 
+1) (This step is not necessary .The file is updated ) After downloading the script, you need to run `sed -i -e 's/\r$//' ./thinkpad-e15-gen2-firmware-fix.sh` to strip out ^M in the file 
 
 2) You need to run the following commands to install acpidump
 
@@ -49,8 +49,12 @@ Run the script named  `thinkpad-e15-gen2-firmware-fix_fedora.sh` and it should w
 Pop os uses systemd-boot . So first we need to install grub . For that you can follow this video : https://youtu.be/wLOZfT0732Y
 Then donwload the script for pop , make it executable and then run as : 
 `sudo ./thinkpad-e15-gen2-firmware-fix_pop.sh --grub-setup-dsdt`
+For this to work , you will need to boot via grub each time . 
 
+### Opensuse
+Run the script named  `thinkpad-e15-gen2-firmware-fix_opensuse.sh` and it should work . Tested in opensuse tumbleweed kernel 5.12.
 
+#### Report if any issue arises .
 
 
 ### Forums
